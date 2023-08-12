@@ -12,10 +12,8 @@ class _Page1State extends State<Page1> {
   String email = "";
   getCachedEmail() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    email = prefs.getString('email' ?? '--')!;
-   setState(() {
-     
-   });
+    email = prefs.getString('email')!;
+    setState(() {});
   }
 
   @override

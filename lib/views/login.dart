@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
                 onTap: () async {
                   if (_formkey.currentState!.validate()) {
 final SharedPreferences prefs = await SharedPreferences.getInstance();
-await prefs.setString('action', mycontroller.text);
+await prefs.setString('email', mycontroller.text);
                     // ignore: use_build_context_synchronously
                     Navigator.push(
                         context,
