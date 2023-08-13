@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Myhome.dart';
+
 void main() {
   runApp((const MyApp()));
 }
@@ -72,8 +72,9 @@ class _MyAppState extends State<MyApp> {
               InkWell(
                 onTap: () async {
                   if (_formkey.currentState!.validate()) {
-final SharedPreferences prefs = await SharedPreferences.getInstance();
-await prefs.setString('email', mycontroller.text);
+                    final SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+                    await prefs.setString('email', mycontroller.text);
                     // ignore: use_build_context_synchronously
                     Navigator.push(
                         context,
